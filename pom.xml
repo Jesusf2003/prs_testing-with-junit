@@ -14,7 +14,7 @@
 	<name>as201-ms-person</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
-		<java.version>17</java.version>
+		<java.version>11</java.version>
 		<sonar.qualitygate.wait>true</sonar.qualitygate.wait>
 		<sonar.host.url>${{secrets.SONAR_HOST_URL}}</sonar.host.url>
 		<sonar.login>${{secrets.SONAR_LOGIN}}</sonar.login>
