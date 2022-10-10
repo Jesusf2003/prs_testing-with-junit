@@ -1,0 +1,40 @@
+2022-10-04 21:17:24.120  INFO 8860 --- [main] com.ms_person.MsPersonApplication        : Starting MsPersonApplication using Java 17.0.4.1 on DESKTOP-15E64H8 with PID 8860 (D:\JuanCondori\Documentos\IntelliJ_IDEA\PRS\PERSON\ms_person\target\classes started by Juan Condori in D:\JuanCondori\Documentos\IntelliJ_IDEA\PRS\PERSON\ms_person)
+2022-10-04 21:17:24.131  INFO 8860 --- [main] com.ms_person.MsPersonApplication        : No active profile set, falling back to 1 default profile: "default"
+2022-10-04 21:17:25.686  INFO 8860 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data R2DBC repositories in DEFAULT mode.
+2022-10-04 21:17:25.905  INFO 8860 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 209 ms. Found 1 R2DBC repository interfaces.
+2022-10-04 21:17:29.914  WARN 8860 --- [main] onfigReactiveWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8085 is already in use
+2022-10-04 21:17:32.107  INFO 8860 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-10-04 21:17:32.170 ERROR 8860 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8085 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8085 or configure this application to listen on another port.
+
+2022-10-04 21:19:58.662  INFO 12772 --- [main] com.ms_person.MsPersonApplication        : Starting MsPersonApplication using Java 17.0.4.1 on DESKTOP-15E64H8 with PID 12772 (D:\JuanCondori\Documentos\IntelliJ_IDEA\PRS\PERSON\ms_person\target\classes started by Juan Condori in D:\JuanCondori\Documentos\IntelliJ_IDEA\PRS\PERSON\ms_person)
+2022-10-04 21:19:58.671  INFO 12772 --- [main] com.ms_person.MsPersonApplication        : No active profile set, falling back to 1 default profile: "default"
+2022-10-04 21:20:01.426  INFO 12772 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data R2DBC repositories in DEFAULT mode.
+2022-10-04 21:20:01.625  INFO 12772 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 180 ms. Found 1 R2DBC repository interfaces.
+2022-10-04 21:20:06.356  INFO 12772 --- [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8085
+2022-10-04 21:20:06.403  INFO 12772 --- [main] com.ms_person.MsPersonApplication        : Started MsPersonApplication in 11.95 seconds (JVM running for 16.051)
+2022-10-04 21:21:24.484  INFO 12772 --- [reactor-http-nio-3] c.m.service.impl.PersonServiceImpl       : Mostrando todas las personas
+2022-10-04 21:22:07.450  INFO 12772 --- [reactor-http-nio-3] c.m.service.impl.PersonServiceImpl       : Persona eliminada = 1
+2022-10-04 21:22:07.532  WARN 12772 --- [reactor-tcp-nio-1] reactor.netty.channel.FluxReceive        : [4f9639bc, L:/127.0.0.1:53639 - R:localhost/127.0.0.1:5432] An exception has been observed post termination, use DEBUG level to see the full stack: java.net.SocketException: Connection reset
+2022-10-04 21:22:35.517  INFO 12772 --- [reactor-http-nio-3] c.m.service.impl.PersonServiceImpl       : Persona restaurada = 1
+2022-10-04 21:23:10.723  INFO 12772 --- [reactor-http-nio-3] c.m.service.impl.PersonServiceImpl       : Persona creada = Person(id=null, id_type=DNI, id_number=70335061, name=Juan Gabriel, lastname=Condori Jara, cellphone=940460321, email=juangabrielcondorijara@gmail.com, username=juan, password=12345@ABC, active=false)
+2022-10-04 21:24:18.616  INFO 12772 --- [reactor-http-nio-3] c.m.service.impl.PersonServiceImpl       : Persona actualizada = Person(id=2, id_type=DNIII, id_number=70335061, name=Juan Gabriel, lastname=Condori Jara, cellphone=940460321, email=juangabrielcondorijara@gmail.com, username=jhianpol, password=12345@ABC, active=false)
+2022-10-04 21:25:03.205  INFO 12772 --- [reactor-http-nio-3] c.m.service.impl.PersonServiceImpl       : Persona encontrada con el ID = 1
+2022-10-04 21:25:10.999  INFO 12772 --- [reactor-http-nio-3] c.m.service.impl.PersonServiceImpl       : Persona encontrada con el ID = 2
+2022-10-04 21:25:27.768  INFO 12772 --- [reactor-http-nio-3] c.m.service.impl.PersonServiceImpl       : Personas filtradas por estado = true
+2022-10-04 21:25:27.827 DEBUG 12772 --- [reactor-http-nio-3] o.s.d.r2dbc.core.NamedParameterExpander  : Expanding SQL statement [SELECT * FROM person WHERE active = :active ORDER BY id DESC] to [SELECT * FROM person WHERE active = $1 ORDER BY id DESC]
+2022-10-04 21:25:55.341  INFO 12772 --- [reactor-http-nio-3] c.m.service.impl.PersonServiceImpl       : Personas filtradas por estado = false
+2022-10-04 21:25:55.344 DEBUG 12772 --- [reactor-http-nio-3] o.s.d.r2dbc.core.NamedParameterExpander  : Expanding SQL statement [SELECT * FROM person WHERE active = :active ORDER BY id DESC] to [SELECT * FROM person WHERE active = $1 ORDER BY id DESC]
