@@ -16,8 +16,8 @@
 	<properties>
 		<java.version>17</java.version>
 		<sonar.qualitygate.wait>true</sonar.qualitygate.wait>
-		<sonar.host.url>http://35.222.30.201:9400</sonar.host.url>
-		<sonar.login>62192f90e2d84e1ac2e3acdfd2a674e30cf68c61</sonar.login>
+		<sonar.host.url>${{secrets.SONAR_HOST_URL}}</sonar.host.url>
+		<sonar.login>${{secrets.SONAR_LOGIN}}</sonar.login>
 		<sonar.projectVersion>1.0</sonar.projectVersion>
 		<sonar.sources>src/main</sonar.sources>
 		<sonar.java.binaries>target/classes</sonar.java.binaries>
